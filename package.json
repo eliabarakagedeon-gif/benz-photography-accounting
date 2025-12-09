@@ -1,0 +1,27 @@
+{
+  "name": "benz-photography-accounting",
+  "version": "1.0.0",
+  "description": "Monorepo for Benz Photography Accounting System",
+  "private": true,
+  "workspaces": [
+    "packages/server",
+    "packages/client"
+  ],
+  "scripts": {
+    "install-all": "yarn install",
+    "dev": "yarn workspace server dev & yarn workspace client dev",
+    "build": "yarn workspace server build && yarn workspace client build",
+    "start:server": "yarn workspace server start",
+    "start:client": "yarn workspace client start",
+    "test": "yarn workspace server test && yarn workspace client test",
+    "test:server": "yarn workspace server test",
+    "test:client": "yarn workspace client test",
+    "lint": "yarn workspace server lint && yarn workspace client lint",
+    "lint:fix": "yarn workspace server lint:fix && yarn workspace client lint:fix"
+  },
+  "devDependencies": {},
+  "engines": {
+    "node": ">=16.0.0",
+    "yarn": ">=1.22.0"
+  }
+}
